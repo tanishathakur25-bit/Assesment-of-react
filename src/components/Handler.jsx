@@ -1,22 +1,23 @@
-// import tasksData from "../data/db";
-// import { useState } from "react";
+import tasksData from "../data/db";
+import { useState } from "react";
 
 export function Handler(){
-    // const [ tasks, setTasks ] = useState(tasksData);
-    // const [ remove, setRemove ] = useState();
-    // const [ add, setAdd ] = useState();
-
-    // function removeHandler(){
+    const [ tasks, setTasks ] = useState(tasksData);
+    function Handler(){
         
-    // }
+    }
+   
 
     return(
         <>
         <div>
         <h3>Task Dashboard</h3>
-
-        <button>Complete</button>
-        {/* <button onClick={removeHandler}>Delete</button> */}
+        {tasks.map((items)=>(
+            <>
+            <p>{tasks.category}</p>
+            <p>{tasks.priority}</p>
+            </>
+        ))}
         </div>
 
         </>
